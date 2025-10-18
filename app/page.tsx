@@ -1,18 +1,135 @@
-import Hero from "@/components/sections/Hero";
-import Experience from "@/components/sections/Experience";
-import Leadership from "@/components/sections/Leadership";
-import Projects from "@/components/sections/Projects";
-import Contact from "@/components/sections/Contact";
+"use client";
+
+import { motion } from "framer-motion";
+import FloatingTopNav from "@/components/FloatingTopNav";
+import JourneyTimeline from "@/components/JourneyTimeline";
+import AlternatingBusinessSection from "@/components/sections/AlternatingBusinessSection";
+import AlternatingProjectsSection from "@/components/sections/AlternatingProjectsSection";
+import AlternatingLeadershipSection from "@/components/sections/AlternatingLeadershipSection";
 
 export default function Home() {
   return (
-    <div className="overflow-hidden">
-      <Hero />
-      <Experience />
-      <Leadership />
-      <Projects />
-      <Contact />
+    <div className="relative">
+      <FloatingTopNav />
+
+      {/* Hero Section with Timeline */}
+      <section className="relative min-h-screen pt-32 px-6 lg:px-12 overflow-hidden">
+        {/* Background Portrait */}
+        <div className="absolute left-0 top-0 bottom-0 w-full lg:w-[50%] pointer-events-none">
+          <div className="relative w-full h-full opacity-15 dark:opacity-8">
+            <img
+              src="/images/jordan-portrait.png"
+              alt=""
+              className="absolute right-0 top-1/2 -translate-y-1/2 h-[90%] w-auto object-contain"
+            />
+          </div>
+        </div>
+
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="grid lg:grid-cols-12 gap-16">
+            {/* Left - Name & Intro */}
+            <div className="lg:col-span-6">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-8 leading-none tracking-wide">
+                  Jordan{" "}
+                  <span className="text-primary-600 dark:text-primary-400">
+                    Oiknine
+                  </span>
+                </h1>
+
+                <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 max-w-2xl leading-relaxed font-light mb-8">
+                  Hey! I&apos;m a high school student who loves building things—whether 
+                  it&apos;s biotech research projects, community initiatives, or businesses. 
+                  This is my space to share what I&apos;ve been working on and learning. 
+                  No fancy portfolio vibes, just a casual look at the stuff I care about 
+                  and the journey so far.
+                </p>
+
+                {/* Social Links */}
+                <motion.div
+                  className="flex flex-wrap items-center gap-6"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.3 }}
+                >
+                  <a
+                    href="https://linkedin.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                  >
+                    LinkedIn →
+                  </a>
+                  <a
+                    href="https://github.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                  >
+                    GitHub →
+                  </a>
+                  <a
+                    href="https://instagram.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                  >
+                    Instagram →
+                  </a>
+                  <a
+                    href="/resume.pdf"
+                    target="_blank"
+                    className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                  >
+                    Resume →
+                  </a>
+                </motion.div>
+
+                {/* Business Buttons */}
+                <motion.div
+                  className="flex flex-wrap items-center gap-3 mt-8"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                >
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-primary-600 dark:bg-primary-500 text-white text-sm font-medium rounded-lg hover:bg-primary-700 dark:hover:bg-primary-600 transition-colors shadow-sm hover:shadow-md"
+                  >
+                    LawnLink Management
+                  </a>
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-primary-600 dark:bg-primary-500 text-white text-sm font-medium rounded-lg hover:bg-primary-700 dark:hover:bg-primary-600 transition-colors shadow-sm hover:shadow-md"
+                  >
+                    STL Soccer Training
+                  </a>
+                </motion.div>
+              </motion.div>
+            </div>
+
+            {/* Right - Journey Timeline */}
+            <div className="lg:col-span-6">
+              <JourneyTimeline />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Content Sections with Alternating Layouts */}
+      <div className="relative mt-24">
+        <AlternatingBusinessSection />
+        <AlternatingProjectsSection />
+        <AlternatingLeadershipSection />
+      </div>
     </div>
   );
 }
-

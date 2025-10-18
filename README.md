@@ -1,50 +1,64 @@
-# Jordan Oiknine - Personal Portfolio
+# Jordan Oiknine - Creative Portfolio
 
-A modern, minimalist portfolio website built with Next.js 14, TypeScript, and Tailwind CSS. Features smooth animations, dark mode, and a distinctive asymmetric design.
+A distinctive, non-traditional portfolio website built with Next.js 14, TypeScript, and Tailwind CSS. Features an unconventional navigation system, editorial layouts, and project-first storytelling.
 
-## 🚀 Features
+## 🎨 Design Philosophy
+
+This portfolio breaks from traditional templates with:
+- **Portal Landing**: Interactive entry point with 3 exploration paths
+- **Non-linear Navigation**: Floating nav system for seamless transitions
+- **Magazine Layouts**: Editorial-style content presentation
+- **Creative Interactions**: Hover reveals, expandable timelines, slide-in details
+
+## ✨ Features
 
 - **Modern Stack**: Next.js 14 (App Router), TypeScript, Tailwind CSS
-- **Smooth Animations**: Framer Motion for scroll reveals and transitions
-- **Dark Mode**: Toggle between light and dark themes
-- **Responsive Design**: Mobile-first approach with beautiful layouts on all devices
+- **Creative Navigation**: Portal-based entry with floating navigation
+- **Three Main Views**:
+  - **Work**: Magazine-style project showcase with featured layout
+  - **Story**: Editorial personal narrative with horizontal timeline
+  - **Connect**: Minimal contact panel
+- **Smooth Animations**: Framer Motion for page transitions and interactions
+- **Dark Mode**: Theme toggle with smooth transitions
+- **Fully Responsive**: Mobile-first design with adaptive layouts
 - **SEO Optimized**: Proper metadata and semantic HTML
-- **Fast Performance**: Optimized images and static generation
-- **Unique Sections**:
-  - Hero/About with asymmetric layout
-  - Experience timeline
-  - Leadership cards
-  - Projects showcase with dynamic pages
-  - Contact form
 
 ## 📁 Project Structure
 
 ```
 ├── app/
-│   ├── layout.tsx          # Root layout with theme provider
-│   ├── page.tsx             # Homepage with all sections
-│   ├── projects/[slug]/     # Dynamic project pages
-│   └── globals.css          # Global styles
+│   ├── layout.tsx              # Minimal layout (no navbar/footer)
+│   ├── page.tsx                # Portal landing page
+│   ├── work/
+│   │   ├── page.tsx           # Projects magazine view
+│   │   └── [slug]/page.tsx    # Individual project details
+│   ├── story/page.tsx          # Personal narrative & timeline
+│   └── connect/page.tsx        # Contact panel
 ├── components/
-│   ├── Navbar.tsx           # Fixed navigation with smooth scroll
-│   ├── Footer.tsx           # Footer with social links
-│   ├── ThemeToggle.tsx      # Dark mode toggle
-│   ├── sections/            # Homepage sections
-│   │   ├── Hero.tsx
-│   │   ├── Experience.tsx
-│   │   ├── Leadership.tsx
-│   │   ├── Projects.tsx
-│   │   └── Contact.tsx
-│   └── ui/                  # Reusable UI components
-│       ├── ProjectCard.tsx
+│   ├── Portal.tsx              # Interactive landing with 3 cards
+│   ├── FloatingNav.tsx         # Minimal floating navigation
+│   ├── ThemeToggle.tsx         # Dark mode toggle
+│   ├── views/
+│   │   ├── WorkView.tsx       # Projects view
+│   │   ├── StoryView.tsx      # Story view
+│   │   └── ConnectView.tsx    # Connect view
+│   ├── project/
+│   │   ├── FeaturedProject.tsx
+│   │   ├── ProjectGrid.tsx
+│   │   └── ProjectDetail.tsx
+│   ├── timeline/
+│   │   ├── HorizontalTimeline.tsx
+│   │   └── TimelineItem.tsx
+│   └── ui/
 │       └── Button.tsx
 ├── data/
-│   └── projects.ts          # Project data (easy to edit!)
+│   ├── projects.ts             # Project data
+│   └── experiences.ts          # Timeline experiences
 └── lib/
-    └── utils.ts             # Helper functions
+    └── utils.ts                # Utilities
 ```
 
-## 🛠 Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 
@@ -70,21 +84,28 @@ A modern, minimalist portfolio website built with Next.js 14, TypeScript, and Ta
 
 ### 1. Personal Information
 
-Update your details in:
-- `components/sections/Hero.tsx` - Your intro text
-- `components/Navbar.tsx` - Your name
-- `components/Footer.tsx` - Contact info and social links
-- `app/layout.tsx` - Site metadata and SEO
+**Portal Landing** (`components/Portal.tsx`):
+- Update name and subtitle
+
+**Story View** (`components/views/StoryView.tsx`):
+- Edit personal philosophy text
+- Update "Why Biotech?" and other narrative sections
+
+**Connect View** (`components/views/ConnectView.tsx`):
+- Update email, LinkedIn, GitHub links
+
+**Layout** (`app/layout.tsx`):
+- Update site metadata and SEO
 
 ### 2. Add/Edit Projects
 
-Edit the `data/projects.ts` file:
+Edit `data/projects.ts`:
 
 ```typescript
 {
   slug: "your-project-slug",
   title: "Project Title",
-  description: "Brief description for card",
+  description: "Brief description for cards",
   fullDescription: `<h2>Full HTML content</h2><p>Details...</p>`,
   tags: ["Tag1", "Tag2"],
   image: "https://your-image-url.com/image.jpg",
@@ -97,33 +118,69 @@ Edit the `data/projects.ts` file:
 }
 ```
 
-### 3. Update Experience & Leadership
+### 3. Update Experiences & Timeline
 
-Edit:
-- `components/sections/Experience.tsx` - Timeline items
-- `components/sections/Leadership.tsx` - Leadership cards
+Edit `data/experiences.ts`:
 
-### 4. Replace Placeholder Images
+```typescript
+{
+  id: "unique-id",
+  title: "Experience Title",
+  organization: "Organization",
+  period: "2023 - Present",
+  description: "Description...",
+  category: "sports" | "leadership" | "service" | "business",
+  impact: "Impact statement"
+}
+```
 
-1. Add your photos to `/public/images/`
+### 4. Replace Photos
+
+1. Add images to `public/images/`
 2. Update image URLs in:
-   - `components/sections/Hero.tsx` - Your profile photo
+   - `components/views/StoryView.tsx` - Profile photo
    - `data/projects.ts` - Project images
 
 ### 5. Colors & Theme
 
 Edit `tailwind.config.ts` to customize:
-- Primary colors
-- Accent colors
+- Primary/accent colors
 - Fonts
 - Animations
+- Spacing
+
+## 🎯 Key Design Elements
+
+### Portal Navigation
+The landing page presents three interactive cards that users can explore:
+- **Work**: Showcases biotech projects
+- **Story**: Personal journey and philosophy
+- **Connect**: Contact information
+
+### Magazine Layout (Work View)
+- Featured project takes 60% of viewport
+- Asymmetric grid for secondary projects
+- Hover effects and smooth transitions
+- Click any project for full detail overlay
+
+### Editorial Story View
+- Side-by-side photo and narrative
+- Horizontal scrolling timeline
+- Clickable experience cards that expand
+- Personal philosophy replaces generic bio
+
+### Minimal Connect
+- Centered, clean layout
+- Direct contact links
+- No form clutter
+- Genuine student voice
 
 ## 🚀 Deployment to Vercel
 
 1. **Push to GitHub:**
    ```bash
    git add .
-   git commit -m "Initial portfolio setup"
+   git commit -m "Creative portfolio redesign"
    git push origin main
    ```
 
@@ -131,17 +188,9 @@ Edit `tailwind.config.ts` to customize:
    - Go to [vercel.com](https://vercel.com)
    - Click "New Project"
    - Import your GitHub repository
-   - Vercel will auto-detect Next.js settings
    - Click "Deploy"
 
 Your site will be live in minutes!
-
-### Environment Variables (Optional)
-
-If you add email functionality or analytics:
-1. Go to your Vercel project settings
-2. Add environment variables
-3. Redeploy
 
 ## 📝 Available Scripts
 
@@ -152,29 +201,71 @@ npm start        # Start production server
 npm run lint     # Run ESLint
 ```
 
-## 🎨 Design Philosophy
+## 🎨 Design Highlights
 
-- **Minimalist**: Clean typography and generous white space
-- **Distinctive**: Asymmetric grids and unique layouts per section
-- **Smooth**: Subtle animations that enhance, not distract
-- **Accessible**: Semantic HTML and keyboard navigation
-- **Fast**: Optimized images and static generation
+### What Makes This Different
 
-## 📱 Browser Support
+**Not a Template:**
+- No standard navbar or hero section
+- Non-linear navigation system
+- Editorial layouts instead of card grids
+- Personal narrative over resume format
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+**Creative Elements:**
+- Interactive portal landing
+- Floating navigation system
+- Magazine-style featured projects
+- Horizontal scrolling timeline
+- Expandable experience cards
+- Slide-in project details
 
-## 📄 License
+**Smooth Interactions:**
+- Page transitions with Framer Motion
+- Hover reveals and effects
+- Scale and fade animations
+- Modal overlays for details
 
-This project is open source and available under the MIT License.
+## 📱 Responsive Design
 
-## 🙋‍♂️ Support
+- **Mobile**: Stacked cards, vertical timeline, simplified layouts
+- **Tablet**: 2-column grids, adjusted spacing
+- **Desktop**: Full magazine layouts, horizontal timeline
 
-For questions or issues, please open an issue on GitHub or contact [your-email@example.com]
+## 🛠 Technologies
+
+- **Framework**: Next.js 14.2 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS 3.4
+- **Animations**: Framer Motion 11.11
+- **Icons**: Lucide React
+- **Theme**: next-themes
+- **Fonts**: Inter (body), Playfair Display (headings)
+
+## 📄 Routes
+
+- `/` - Portal landing
+- `/work` - Projects showcase
+- `/work/[slug]` - Individual project detail
+- `/story` - Personal narrative & timeline
+- `/connect` - Contact panel
+
+## 🎯 Built For College Applications
+
+This portfolio is designed to stand out in college applications by:
+- Showing creativity and technical skill
+- Demonstrating design thinking
+- Presenting work in a compelling way
+- Highlighting personal story authentically
+- Being memorable and distinctive
+
+## 📚 Documentation Files
+
+- `README.md` - This file
+- `QUICK_START.md` - Quick customization guide
+- `PROJECT_SUMMARY.md` - Original build documentation
 
 ---
 
-Built with ❤️ using Next.js, TypeScript, and Tailwind CSS
+**Built with creativity** using Next.js, TypeScript, and Tailwind CSS
+
+**Breaking templates, building experiences** 🚀

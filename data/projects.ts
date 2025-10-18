@@ -15,118 +15,103 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    slug: "biotech-research-project-1",
-    title: "CRISPR Gene Editing Research",
+    slug: "lactasense",
+    title: "LactaSense",
     description:
-      "Investigated the applications of CRISPR-Cas9 technology in treating genetic disorders. Conducted literature review and theoretical analysis.",
+      "DECA International Finalist project. Developed a rapid lactose intolerance detection system using biosensor technology. Combining entrepreneurship with biotech innovation to solve a real-world health problem.",
     fullDescription: `
       <h2>Overview</h2>
-      <p>This research project explored the revolutionary potential of CRISPR-Cas9 gene editing technology in addressing hereditary genetic disorders. The study focused on understanding the mechanisms, applications, and ethical considerations of this groundbreaking biotechnology.</p>
+      <p>LactaSense is a rapid lactose intolerance detection system that I developed for DECA's international competition, where it became an international finalist. The project combines biosensor technology with practical healthcare applications to solve a common digestive health problem.</p>
       
-      <h2>Research Goals</h2>
+      <h2>The Problem</h2>
+      <p>Current lactose intolerance testing is expensive, time-consuming, and often uncomfortable. Many people go undiagnosed or self-diagnose incorrectly, leading to unnecessary dietary restrictions or continued discomfort.</p>
+      
+      <h2>The Solution</h2>
+      <p>LactaSense uses enzymatic biosensors to detect lactose metabolism byproducts in a simple, at-home test. Users get results in minutes rather than days, making diagnosis more accessible and affordable.</p>
+      
+      <h2>Business Model</h2>
       <ul>
-        <li>Analyze current CRISPR applications in medical treatment</li>
-        <li>Evaluate the efficacy and safety of gene editing techniques</li>
-        <li>Examine ethical implications of genetic modification</li>
-        <li>Propose future research directions</li>
+        <li>Direct-to-consumer test kits</li>
+        <li>Partnership with primary care physicians</li>
+        <li>Subscription model for dietary tracking</li>
+        <li>Data-driven personalized nutrition recommendations</li>
       </ul>
       
-      <h2>Methodology</h2>
-      <p>Conducted extensive literature review of peer-reviewed journals, analyzed case studies, and created theoretical models for potential applications.</p>
+      <h2>DECA Competition</h2>
+      <p>Presented LactaSense at DECA's international conference, competing against hundreds of entrepreneurship projects. The judges praised the combination of scientific innovation with practical business applications.</p>
       
-      <h2>Key Findings</h2>
-      <p>The research highlighted significant promise in treating sickle cell disease and certain forms of inherited blindness, while also identifying important safety and ethical considerations that require careful attention.</p>
-      
-      <h2>Impact</h2>
-      <p>This work deepened my understanding of biotechnology's role in medicine and inspired further study in genetic engineering.</p>
+      <h2>What I Learned</h2>
+      <p>This project taught me that great innovation isn't just about the science—it's about understanding market needs, building a viable business model, and communicating complex ideas clearly. It's where my biotech passion meets real-world entrepreneurship.</p>
     `,
-    tags: ["Biotech", "CRISPR", "Genetics", "Research"],
-    image: "https://placehold.co/800x600/3b82f6/ffffff?text=CRISPR+Research",
+    tags: ["Biotech", "DECA", "Entrepreneurship", "Healthcare"],
+    image: "https://placehold.co/800x600/3b82f6/ffffff?text=LactaSense",
     date: "2024",
     links: {
       paper: "#",
     },
   },
   {
-    slug: "biotech-research-project-2",
-    title: "Microbiome Analysis Study",
+    slug: "bioimpedance-sensor",
+    title: "Bioimpedance Sensor",
     description:
-      "Studied the human gut microbiome and its impact on overall health. Explored connections between microbiota diversity and immune function.",
+      "Designing a non-invasive bioimpedance sensor for real-time health monitoring. Using electrical impedance to measure body composition, hydration levels, and metabolic changes.",
     fullDescription: `
       <h2>Overview</h2>
-      <p>This project investigated the complex relationship between the human gut microbiome and various aspects of health, including immunity, metabolism, and mental well-being.</p>
+      <p>Bioimpedance sensing uses small electrical currents to measure the body's impedance (resistance and reactance). Different tissues have different impedance values, allowing us to non-invasively monitor health metrics in real-time.</p>
       
-      <h2>Research Focus</h2>
+      <h2>What It Measures</h2>
       <ul>
-        <li>Understanding microbiome composition and diversity</li>
-        <li>Analyzing connections to immune system function</li>
-        <li>Investigating dietary impacts on microbiota</li>
-        <li>Exploring therapeutic potential of microbiome modulation</li>
+        <li>Body composition (fat vs. muscle mass)</li>
+        <li>Hydration levels and fluid distribution</li>
+        <li>Metabolic rate indicators</li>
+        <li>Cardiovascular health markers</li>
       </ul>
       
-      <h2>Approach</h2>
-      <p>Reviewed current scientific literature, analyzed published microbiome datasets, and created visualizations to illustrate key relationships between microbiota composition and health outcomes.</p>
+      <h2>Technical Approach</h2>
+      <p>The sensor uses multi-frequency bioimpedance analysis (BIA) with custom-designed electrodes. Signal processing algorithms filter noise and extract meaningful health data from the impedance measurements.</p>
       
-      <h2>Discoveries</h2>
-      <p>The research revealed fascinating connections between gut health and systemic wellness, highlighting the importance of maintaining diverse microbial populations.</p>
+      <h2>Applications</h2>
+      <p>This technology could help athletes optimize training, assist patients with chronic conditions in monitoring their health, and provide early warning signs of dehydration or other health issues.</p>
+      
+      <h2>Current Status</h2>
+      <p>Currently in prototype phase, testing accuracy against clinical-grade equipment and refining the sensor design for improved signal quality.</p>
     `,
-    tags: ["Biotech", "Microbiome", "Health", "Research"],
-    image: "https://placehold.co/800x600/8b5cf6/ffffff?text=Microbiome+Study",
+    tags: ["Biotech", "Sensors", "Health Tech", "Engineering"],
+    image: "https://placehold.co/800x600/8b5cf6/ffffff?text=Bioimpedance",
     date: "2024",
   },
   {
-    slug: "biotech-research-project-3",
-    title: "Sustainable Biofuel Development",
+    slug: "resinyl",
+    title: "Resinyl",
     description:
-      "Explored the potential of algae-based biofuels as a renewable energy source. Analyzed production methods and environmental impact.",
+      "Local pain reliever prodrug complex using Resiniferatoxin (RTX) as the active constituent. Researching controlled-release mechanisms for targeted, long-lasting pain management with minimal side effects.",
     fullDescription: `
       <h2>Overview</h2>
-      <p>This research focused on the potential of microalgae as a sustainable source of biofuel, examining cultivation methods, lipid extraction processes, and environmental benefits.</p>
+      <p>Resinyl is a research project focused on developing a localized pain relief system using Resiniferatoxin (RTX), an ultra-potent analgesic derived from the Moroccan cactus-like plant Euphorbia resinifera.</p>
       
-      <h2>Project Objectives</h2>
+      <h2>The Science</h2>
+      <p>RTX is approximately 1,000 times more potent than capsaicin (the compound that makes peppers hot). It works by overstimulating and then desensitizing pain receptors (TRPV1), providing long-lasting pain relief without the side effects of opioids.</p>
+      
+      <h2>The Challenge</h2>
+      <p>RTX's extreme potency makes it difficult to administer safely. Our approach uses a prodrug complex—an inactive form that converts to the active RTX only at the target site, minimizing systemic exposure and side effects.</p>
+      
+      <h2>Controlled Release Mechanism</h2>
       <ul>
-        <li>Evaluate different algae species for biofuel production</li>
-        <li>Compare cultivation methods and efficiency</li>
-        <li>Assess environmental impact versus fossil fuels</li>
-        <li>Calculate theoretical production scalability</li>
+        <li>pH-sensitive polymer coating</li>
+        <li>Enzyme-activated release at inflammation sites</li>
+        <li>Targeted delivery to pain receptors</li>
+        <li>Sustained effect lasting weeks to months</li>
       </ul>
       
-      <h2>Methodology</h2>
-      <p>Conducted theoretical analysis of published research, created comparative models of different algae strains, and calculated potential carbon reduction impacts.</p>
+      <h2>Potential Applications</h2>
+      <p>This could be transformative for patients with chronic pain conditions like severe arthritis, neuropathy, or cancer pain—providing relief without addiction risk or systemic side effects.</p>
       
-      <h2>Outcomes</h2>
-      <p>Identified promising algae species and cultivation approaches that could contribute to renewable energy solutions while reducing carbon emissions.</p>
+      <h2>Current Research Phase</h2>
+      <p>Working on formulation chemistry and in vitro testing of release mechanisms. Collaborating with university researchers to validate the approach before moving toward clinical applications.</p>
     `,
-    tags: ["Biotech", "Sustainability", "Energy", "Research"],
-    image: "https://placehold.co/800x600/10b981/ffffff?text=Biofuel+Research",
-    date: "2023",
-  },
-  {
-    slug: "biotech-research-project-4",
-    title: "Cancer Immunotherapy Analysis",
-    description:
-      "Researched emerging immunotherapy treatments for cancer. Focused on CAR-T cell therapy and checkpoint inhibitors.",
-    fullDescription: `
-      <h2>Overview</h2>
-      <p>This project investigated cutting-edge immunotherapy approaches to cancer treatment, with particular focus on CAR-T cell therapy and immune checkpoint inhibitors.</p>
-      
-      <h2>Research Areas</h2>
-      <ul>
-        <li>CAR-T cell engineering and applications</li>
-        <li>Checkpoint inhibitor mechanisms</li>
-        <li>Treatment efficacy across cancer types</li>
-        <li>Patient response patterns and biomarkers</li>
-      </ul>
-      
-      <h2>Analysis</h2>
-      <p>Reviewed clinical trial data, analyzed success rates across different cancer types, and examined factors influencing treatment outcomes.</p>
-      
-      <h2>Insights</h2>
-      <p>The research highlighted the transformative potential of immunotherapy while identifying challenges in accessibility and patient selection.</p>
-    `,
-    tags: ["Biotech", "Immunotherapy", "Cancer", "Research"],
-    image: "https://placehold.co/800x600/ec4899/ffffff?text=Cancer+Research",
-    date: "2023",
+    tags: ["Biotech", "Pharmacology", "Pain Management", "Research"],
+    image: "https://placehold.co/800x600/10b981/ffffff?text=Resinyl",
+    date: "2024",
   },
 ];
 
