@@ -3,7 +3,6 @@ export interface Project {
   title: string;
   description: string;
   fullDescription: string;
-  tags: string[];
   image: string;
   date: string;
   links?: {
@@ -43,7 +42,6 @@ export const projects: Project[] = [
       <h2>What I Learned</h2>
       <p>This project taught me that great innovation isn't just about the science—it's about understanding market needs, building a viable business model, and communicating complex ideas clearly. It's where my biotech passion meets real-world entrepreneurship.</p>
     `,
-    tags: ["Biotech", "DECA", "Entrepreneurship", "Healthcare"],
     image: "https://placehold.co/800x600/3b82f6/ffffff?text=LactaSense",
     date: "2024",
     links: {
@@ -76,7 +74,6 @@ export const projects: Project[] = [
       <h2>Current Status</h2>
       <p>Currently in prototype phase, testing accuracy against clinical-grade equipment and refining the sensor design for improved signal quality.</p>
     `,
-    tags: ["Biotech", "Sensors", "Health Tech", "Engineering"],
     image: "https://placehold.co/800x600/8b5cf6/ffffff?text=Bioimpedance",
     date: "2024",
   },
@@ -109,7 +106,6 @@ export const projects: Project[] = [
       <h2>Current Research Phase</h2>
       <p>Working on formulation chemistry and in vitro testing of release mechanisms. Collaborating with university researchers to validate the approach before moving toward clinical applications.</p>
     `,
-    tags: ["Biotech", "Pharmacology", "Pain Management", "Research"],
     image: "https://placehold.co/800x600/10b981/ffffff?text=Resinyl",
     date: "2024",
   },

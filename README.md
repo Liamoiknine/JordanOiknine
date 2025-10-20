@@ -1,24 +1,19 @@
-# Jordan Oiknine - Creative Portfolio
+# Jordan Oiknine - Portfolio
 
-A distinctive, non-traditional portfolio website built with Next.js 14, TypeScript, and Tailwind CSS. Features an unconventional navigation system, editorial layouts, and project-first storytelling.
-
-## 🎨 Design Philosophy
-
-This portfolio breaks from traditional templates with:
-- **Portal Landing**: Interactive entry point with 3 exploration paths
-- **Non-linear Navigation**: Floating nav system for seamless transitions
-- **Magazine Layouts**: Editorial-style content presentation
-- **Creative Interactions**: Hover reveals, expandable timelines, slide-in details
+A modern, single-page portfolio website built with Next.js 14, TypeScript, and Tailwind CSS. Features a clean design with alternating content sections, expandable cards, and smooth animations.
 
 ## ✨ Features
 
 - **Modern Stack**: Next.js 14 (App Router), TypeScript, Tailwind CSS
-- **Creative Navigation**: Portal-based entry with floating navigation
-- **Three Main Views**:
-  - **Work**: Magazine-style project showcase with featured layout
-  - **Story**: Editorial personal narrative with horizontal timeline
-  - **Connect**: Minimal contact panel
-- **Smooth Animations**: Framer Motion for page transitions and interactions
+- **Single-Page Layout**: Smooth scrolling with section navigation
+- **Three Content Sections**:
+  - **Businesses**: Showcasing entrepreneurial ventures
+  - **Projects**: Biotech research and development work
+  - **Leadership**: Community leadership roles and impact
+- **Interactive Cards**: Expandable content cards with horizontal expansion
+- **Floating Headers**: Section headers that slide left when scrolling
+- **Journey Timeline**: Right-side chronological timeline on landing page
+- **Smooth Animations**: Framer Motion for scroll reveals and transitions
 - **Dark Mode**: Theme toggle with smooth transitions
 - **Fully Responsive**: Mobile-first design with adaptive layouts
 - **SEO Optimized**: Proper metadata and semantic HTML
@@ -27,245 +22,193 @@ This portfolio breaks from traditional templates with:
 
 ```
 ├── app/
-│   ├── layout.tsx              # Minimal layout (no navbar/footer)
-│   ├── page.tsx                # Portal landing page
-│   ├── work/
-│   │   ├── page.tsx           # Projects magazine view
-│   │   └── [slug]/page.tsx    # Individual project details
-│   ├── story/page.tsx          # Personal narrative & timeline
-│   └── connect/page.tsx        # Contact panel
+│   ├── layout.tsx              # Root layout with theme provider
+│   ├── page.tsx                # Main single-page layout
+│   └── globals.css             # Global styles and theme variables
 ├── components/
-│   ├── Portal.tsx              # Interactive landing with 3 cards
-│   ├── FloatingNav.tsx         # Minimal floating navigation
+│   ├── FloatingTopNav.tsx      # Floating section navigation
+│   ├── JourneyTimeline.tsx     # Right-side timeline component
 │   ├── ThemeToggle.tsx         # Dark mode toggle
-│   ├── views/
-│   │   ├── WorkView.tsx       # Projects view
-│   │   ├── StoryView.tsx      # Story view
-│   │   └── ConnectView.tsx    # Connect view
-│   ├── project/
-│   │   ├── FeaturedProject.tsx
-│   │   ├── ProjectGrid.tsx
-│   │   └── ProjectDetail.tsx
-│   ├── timeline/
-│   │   ├── HorizontalTimeline.tsx
-│   │   └── TimelineItem.tsx
-│   └── ui/
-│       └── Button.tsx
+│   └── sections/
+│       ├── AlternatingBusinessSection.tsx
+│       ├── AlternatingProjectsSection.tsx
+│       └── AlternatingLeadershipSection.tsx
 ├── data/
-│   ├── projects.ts             # Project data
-│   └── experiences.ts          # Timeline experiences
-└── lib/
-    └── utils.ts                # Utilities
+│   ├── businesses.ts           # Business venture data
+│   ├── projects.ts             # Biotech projects data
+│   └── leadership.ts           # Leadership roles data
+├── lib/
+│   └── utils.ts                # Utility functions
+└── public/
+    └── images/
+        └── jordan-portrait.png # Background portrait image
 ```
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js 18+ installed
-- npm or yarn package manager
+- Node.js 18+ and npm
 
 ### Installation
 
-1. **Install dependencies:**
+1. Clone the repository
+2. Install dependencies:
    ```bash
    npm install
    ```
 
-2. **Run the development server:**
-   ```bash
-   npm run dev
-   ```
+### Development
 
-3. **Open your browser:**
-   Navigate to [http://localhost:3000](http://localhost:3000)
+Start the development server:
+```bash
+npm run dev
+```
 
-## ✏️ Customization Guide
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### 1. Personal Information
+### Build for Production
 
-**Portal Landing** (`components/Portal.tsx`):
-- Update name and subtitle
+```bash
+npm run build
+npm start
+```
 
-**Story View** (`components/views/StoryView.tsx`):
-- Edit personal philosophy text
-- Update "Why Biotech?" and other narrative sections
+## 📝 Customization
 
-**Connect View** (`components/views/ConnectView.tsx`):
-- Update email, LinkedIn, GitHub links
+### Update Personal Information
 
-**Layout** (`app/layout.tsx`):
-- Update site metadata and SEO
+**Landing Page** (`app/page.tsx`):
+- Update name, intro text, and social links
+- Adjust portrait image opacity and positioning
 
-### 2. Add/Edit Projects
+**Journey Timeline** (`components/JourneyTimeline.tsx`):
+- Edit the `journeyItems` array with your experiences
 
-Edit `data/projects.ts`:
+### Modify Content Sections
 
+**Businesses** (`data/businesses.ts`):
 ```typescript
 {
-  slug: "your-project-slug",
+  id: "unique-id",
+  name: "Business Name",
+  tagline: "Brief tagline",
+  description: "Short description",
+  achievements: ["Achievement 1", "Achievement 2", ...],
+  impact: "Impact metric"
+}
+```
+
+**Projects** (`data/projects.ts`):
+```typescript
+{
+  slug: "project-slug",
   title: "Project Title",
-  description: "Brief description for cards",
-  fullDescription: `<h2>Full HTML content</h2><p>Details...</p>`,
-  tags: ["Tag1", "Tag2"],
-  image: "https://your-image-url.com/image.jpg",
+  description: "Brief description",
+  fullDescription: `<p>Detailed HTML content...</p>`,
+  image: "/images/project.jpg",
   date: "2024",
+  tags: ["Tag1", "Tag2"],
   links: {
-    github: "https://github.com/...",
+    github: "https://...",
     live: "https://...",
     paper: "https://..."
   }
 }
 ```
 
-### 3. Update Experiences & Timeline
-
-Edit `data/experiences.ts`:
-
+**Leadership** (`data/leadership.ts`):
 ```typescript
 {
   id: "unique-id",
-  title: "Experience Title",
-  organization: "Organization",
+  title: "Role Title",
+  organization: "Organization Name",
   period: "2023 - Present",
-  description: "Description...",
-  category: "sports" | "leadership" | "service" | "business",
-  impact: "Impact statement"
+  description: "Brief description",
+  achievements: ["Achievement 1", "Achievement 2", ...],
+  impact: "Impact metric"
 }
 ```
 
-### 4. Replace Photos
+### Update Images
 
 1. Add images to `public/images/`
-2. Update image URLs in:
-   - `components/views/StoryView.tsx` - Profile photo
-   - `data/projects.ts` - Project images
+2. Update references in data files
+3. For the landing portrait: replace `public/images/jordan-portrait.png`
 
-### 5. Colors & Theme
+### Styling
 
-Edit `tailwind.config.ts` to customize:
-- Primary/accent colors
-- Fonts
-- Animations
-- Spacing
+**Colors** (`tailwind.config.ts`):
+- Customize the primary color scheme
+- Adjust dark mode colors
 
-## 🎯 Key Design Elements
+**Fonts** (`app/layout.tsx`):
+- Currently using Inter sans-serif
+- Add additional fonts from Google Fonts if needed
 
-### Portal Navigation
-The landing page presents three interactive cards that users can explore:
-- **Work**: Showcases biotech projects
-- **Story**: Personal journey and philosophy
-- **Connect**: Contact information
+## 🎨 Design Features
 
-### Magazine Layout (Work View)
-- Featured project takes 60% of viewport
-- Asymmetric grid for secondary projects
-- Hover effects and smooth transitions
-- Click any project for full detail overlay
+### Section Navigation
+Floating navbar with smooth scroll to each section (Businesses, Projects, Leadership)
 
-### Editorial Story View
-- Side-by-side photo and narrative
-- Horizontal scrolling timeline
-- Clickable experience cards that expand
-- Personal philosophy replaces generic bio
+### Alternating Layouts
+Content cards alternate left/right for visual interest
 
-### Minimal Connect
-- Centered, clean layout
-- Direct contact links
-- No form clutter
-- Genuine student voice
+### Expandable Cards
+- Click any card to expand and see more details
+- Cards expand both vertically and horizontally (70% → 100% width)
+- Smooth animations with Framer Motion
 
-## 🚀 Deployment to Vercel
+### Floating Headers
+- Section headers stick to top while scrolling
+- Slide left (25%) to avoid covering content
+- Return to center when reaching new section
 
-1. **Push to GitHub:**
-   ```bash
-   git add .
-   git commit -m "Creative portfolio redesign"
-   git push origin main
-   ```
+### Journey Timeline
+- Vertical timeline on right side of landing page
+- Shows key milestones chronologically
+- Sticky positioning for visibility
 
-2. **Deploy to Vercel:**
-   - Go to [vercel.com](https://vercel.com)
-   - Click "New Project"
-   - Import your GitHub repository
-   - Click "Deploy"
+## 📱 Mobile Responsive
 
-Your site will be live in minutes!
+- Floating nav adapts to mobile screens
+- Timeline moves to single column
+- Content cards stack vertically
+- Touch-friendly interactive elements
+- Optimized for all screen sizes
 
-## 📝 Available Scripts
+## 🚀 Deployment
 
-```bash
-npm run dev      # Start development server
-npm run build    # Build for production
-npm start        # Start production server
-npm run lint     # Run ESLint
-```
+### Vercel (Recommended)
 
-## 🎨 Design Highlights
+1. Push your code to GitHub
+2. Import your repository in [Vercel](https://vercel.com)
+3. Vercel auto-detects Next.js and deploys
+4. Your site is live!
 
-### What Makes This Different
+The `vercel.json` configuration is already set up for optimal deployment.
 
-**Not a Template:**
-- No standard navbar or hero section
-- Non-linear navigation system
-- Editorial layouts instead of card grids
-- Personal narrative over resume format
+### Other Platforms
 
-**Creative Elements:**
-- Interactive portal landing
-- Floating navigation system
-- Magazine-style featured projects
-- Horizontal scrolling timeline
-- Expandable experience cards
-- Slide-in project details
+The site works on any platform that supports Next.js:
+- Netlify
+- Railway
+- DigitalOcean App Platform
+- AWS Amplify
 
-**Smooth Interactions:**
-- Page transitions with Framer Motion
-- Hover reveals and effects
-- Scale and fade animations
-- Modal overlays for details
+## 🛠️ Tech Stack
 
-## 📱 Responsive Design
-
-- **Mobile**: Stacked cards, vertical timeline, simplified layouts
-- **Tablet**: 2-column grids, adjusted spacing
-- **Desktop**: Full magazine layouts, horizontal timeline
-
-## 🛠 Technologies
-
-- **Framework**: Next.js 14.2 (App Router)
+- **Framework**: Next.js 14 (App Router)
 - **Language**: TypeScript
-- **Styling**: Tailwind CSS 3.4
-- **Animations**: Framer Motion 11.11
-- **Icons**: Lucide React
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
 - **Theme**: next-themes
-- **Fonts**: Inter (body), Playfair Display (headings)
+- **Icons**: Lucide React (minimal usage)
 
-## 📄 Routes
+## 📄 License
 
-- `/` - Portal landing
-- `/work` - Projects showcase
-- `/work/[slug]` - Individual project detail
-- `/story` - Personal narrative & timeline
-- `/connect` - Contact panel
+This project is open source and available under the MIT License.
 
-## 🎯 Built For College Applications
+## 🙏 Credits
 
-This portfolio is designed to stand out in college applications by:
-- Showing creativity and technical skill
-- Demonstrating design thinking
-- Presenting work in a compelling way
-- Highlighting personal story authentically
-- Being memorable and distinctive
-
-## 📚 Documentation Files
-
-- `README.md` - This file
-- `QUICK_START.md` - Quick customization guide
-- `PROJECT_SUMMARY.md` - Original build documentation
-
----
-
-**Built with creativity** using Next.js, TypeScript, and Tailwind CSS
-
-**Breaking templates, building experiences** 🚀
+Built with modern web technologies and best practices for a fast, accessible, and memorable portfolio experience.

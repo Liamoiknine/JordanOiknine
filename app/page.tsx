@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import FloatingTopNav from "@/components/FloatingTopNav";
 import JourneyTimeline from "@/components/JourneyTimeline";
 import AlternatingBusinessSection from "@/components/sections/AlternatingBusinessSection";
@@ -17,10 +18,13 @@ export default function Home() {
         {/* Background Portrait */}
         <div className="absolute left-0 top-0 bottom-0 w-full lg:w-[50%] pointer-events-none">
           <div className="relative w-full h-full opacity-15 dark:opacity-8">
-            <img
+            <Image
               src="/images/jordan-portrait.png"
               alt=""
-              className="absolute right-0 top-1/2 -translate-y-1/2 h-[90%] w-auto object-contain"
+              fill
+              className="object-contain object-right"
+              style={{ objectPosition: 'right center' }}
+              priority
             />
           </div>
         </div>
@@ -86,31 +90,6 @@ export default function Home() {
                     className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                   >
                     Resume →
-                  </a>
-                </motion.div>
-
-                {/* Business Buttons */}
-                <motion.div
-                  className="flex flex-wrap items-center gap-3 mt-8"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.4 }}
-                >
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-primary-600 dark:bg-primary-500 text-white text-sm font-medium rounded-lg hover:bg-primary-700 dark:hover:bg-primary-600 transition-colors shadow-sm hover:shadow-md"
-                  >
-                    LawnLink Management
-                  </a>
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-primary-600 dark:bg-primary-500 text-white text-sm font-medium rounded-lg hover:bg-primary-700 dark:hover:bg-primary-600 transition-colors shadow-sm hover:shadow-md"
-                  >
-                    STL Soccer Training
                   </a>
                 </motion.div>
               </motion.div>

@@ -87,16 +87,28 @@ const AlternatingBusinessSection = () => {
                             transition={{ duration: 0.5 }}
                             className="border-t-2 border-gray-200 dark:border-gray-800 pt-8 mt-8"
                           >
-                            <a
-                              href={business.externalLink}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-flex items-center gap-3 px-8 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-lg font-medium"
-                              onClick={(e) => e.stopPropagation()}
-                            >
-                              Visit {business.name}
-                              <span className="text-xl">→</span>
-                            </a>
+                            <div className="mb-8">
+                              <div className="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-4">
+                                Key Achievements
+                              </div>
+                              <ul className="space-y-3">
+                                {business.achievements.map((achievement, i) => (
+                                  <li key={i} className="flex items-start gap-3 text-gray-600 dark:text-gray-400">
+                                    <span className="text-primary-600 dark:text-primary-400 text-xl mt-0.5">→</span>
+                                    <span className="text-lg">{achievement}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                            
+                            <div className="pt-6 border-t border-gray-200 dark:border-gray-800">
+                              <div className="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
+                                Impact
+                              </div>
+                              <div className="text-2xl font-bold text-primary-600 dark:text-primary-400">
+                                {business.impact}
+                              </div>
+                            </div>
                           </motion.div>
                         )}
                       </AnimatePresence>

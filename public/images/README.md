@@ -2,30 +2,38 @@
 
 Place your portfolio images in this directory.
 
+## Current Images
+
+- `jordan-portrait.png` - Background portrait on landing page
+
 ## Recommended Images
 
-1. **Profile Photo** (`profile.jpg` or `profile.png`)
-   - Resolution: 600x600px or higher
-   - Square aspect ratio
-   - Good lighting and professional appearance
-
-2. **Project Images** (e.g., `project1.jpg`, `project2.jpg`)
-   - Resolution: 800x600px or higher
-   - Aspect ratio: 4:3 or 16:9
-   - Clear, high-quality images that represent each project
+### Project Images
+Add images for your biotech projects:
+- `lactasense.jpg` - LactaSense project image
+- `bioimpedance.jpg` - Bioimpedance Sensor project image
+- `resinyl.jpg` - Resinyl project image
+- Resolution: 1200x800px or higher (16:9 aspect ratio)
+- High quality, clear images that represent each project
 
 ## Usage
 
-After adding your images here, update the references in:
-- `components/sections/Hero.tsx` - for your profile photo
-- `data/projects.ts` - for project images
+After adding your images here, update the references in `data/projects.ts`:
 
-Example:
 ```typescript
-// Before
-image: "https://placehold.co/800x600/..."
-
-// After
-image: "/images/project1.jpg"
+// Example
+{
+  slug: "lactasense",
+  title: "LactaSense",
+  image: "/images/lactasense.jpg",  // Update this path
+  // ...
+}
 ```
 
+## Image Optimization
+
+Next.js automatically optimizes images when using the `Image` component. The site uses this for:
+- Automatic format conversion (WebP)
+- Responsive image sizes
+- Lazy loading
+- Blur placeholder generation
