@@ -77,37 +77,5 @@ export const projects: Project[] = [
     image: "https://placehold.co/800x600/8b5cf6/ffffff?text=Bioimpedance",
     date: "2024",
   },
-  {
-    slug: "resinyl",
-    title: "Resinyl",
-    description:
-      "Local pain reliever prodrug complex using Resiniferatoxin (RTX) as the active constituent. Researching controlled-release mechanisms for targeted, long-lasting pain management with minimal side effects.",
-    fullDescription: `
-      <h2>Overview</h2>
-      <p>Resinyl is a research project focused on developing a localized pain relief system using Resiniferatoxin (RTX), an ultra-potent analgesic derived from the Moroccan cactus-like plant Euphorbia resinifera.</p>
-      
-      <h2>The Science</h2>
-      <p>RTX is approximately 1,000 times more potent than capsaicin (the compound that makes peppers hot). It works by overstimulating and then desensitizing pain receptors (TRPV1), providing long-lasting pain relief without the side effects of opioids.</p>
-      
-      <h2>The Challenge</h2>
-      <p>RTX's extreme potency makes it difficult to administer safely. Our approach uses a prodrug complex—an inactive form that converts to the active RTX only at the target site, minimizing systemic exposure and side effects.</p>
-      
-      <h2>Controlled Release Mechanism</h2>
-      <ul>
-        <li>pH-sensitive polymer coating</li>
-        <li>Enzyme-activated release at inflammation sites</li>
-        <li>Targeted delivery to pain receptors</li>
-        <li>Sustained effect lasting weeks to months</li>
-      </ul>
-      
-      <h2>Potential Applications</h2>
-      <p>This could be transformative for patients with chronic pain conditions like severe arthritis, neuropathy, or cancer pain—providing relief without addiction risk or systemic side effects.</p>
-      
-      <h2>Current Research Phase</h2>
-      <p>Working on formulation chemistry and in vitro testing of release mechanisms. Collaborating with university researchers to validate the approach before moving toward clinical applications.</p>
-    `,
-    image: "https://placehold.co/800x600/10b981/ffffff?text=Resinyl",
-    date: "2024",
-  },
 ];
 

@@ -16,12 +16,13 @@ const AlternatingProjectsSection = () => {
 
   const headerY = useTransform(scrollYProgress, [0, 1], [0, -100]);
   const headerX = useTransform(scrollYProgress, [0, 0.1], ["0%", "-25%"]);
+  const subheaderOpacity = useTransform(scrollYProgress, [0.2, 0.5], [1, 0]);
 
   return (
     <section id="projects" ref={sectionRef} className="relative py-32 px-6 lg:px-12 bg-gray-50 dark:bg-gray-900/50">
       {/* Floating Section Header */}
       <motion.div
-        className="sticky top-24 z-40 mb-24"
+        className="sticky top-24 z-40 mb-12"
         style={{ y: headerY }}
       >
         <div className="max-w-7xl mx-auto">
@@ -29,8 +30,14 @@ const AlternatingProjectsSection = () => {
             className="inline-block bg-primary-600 dark:bg-primary-500 backdrop-blur-xl border-2 border-primary-700 dark:border-primary-600 rounded-full shadow-lg px-8 py-4"
             style={{ x: headerX }}
           >
-            <h2 className="text-3xl font-bold text-white">Check Out My Projects</h2>
+            <h2 className="text-3xl font-bold text-white">My Projects</h2>
           </motion.div>
+          <motion.p 
+            className="mt-4 text-lg text-primary-600 dark:text-primary-400 font-medium"
+            style={{ opacity: subheaderOpacity }}
+          >
+            I LOVE biotech innovation
+          </motion.p>
         </div>
       </motion.div>
 

@@ -12,7 +12,6 @@ Place your portfolio images in this directory.
 Add images for your biotech projects:
 - `lactasense.jpg` - LactaSense project image
 - `bioimpedance.jpg` - Bioimpedance Sensor project image
-- `resinyl.jpg` - Resinyl project image
 - Resolution: 1200x800px or higher (16:9 aspect ratio)
 - High quality, clear images that represent each project
 
