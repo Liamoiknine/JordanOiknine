@@ -4,6 +4,7 @@ export interface Project {
   description: string;
   fullDescription: string;
   image: string;
+  images?: string[]; // Optional array for multiple images
   date: string;
   links?: {
     github?: string;
@@ -17,33 +18,39 @@ export const projects: Project[] = [
     slug: "lactasense",
     title: "LactaSense",
     description:
-      "DECA International Finalist project. Developed a rapid lactose intolerance detection system using biosensor technology. Combining entrepreneurship with biotech innovation to solve a real-world health problem.",
+      "DECA International Finalist project. Developed a rapid lactic acid detection system using biosensor technology to monitor muscle fatigue. Combining entrepreneurship with biotech innovation to optimize athletic performance and prevent injury.",
     fullDescription: `
       <h2>Overview</h2>
-      <p>LactaSense is a rapid lactose intolerance detection system that I developed for DECA's international competition, where it became an international finalist. The project combines biosensor technology with practical healthcare applications to solve a common digestive health problem.</p>
+      <p>LactaSense is a rapid lactic acid detection system that I developed for DECA's international competition, where it became an international finalist. The project combines biosensor technology with practical applications in sports performance and injury prevention.</p>
       
       <h2>The Problem</h2>
-      <p>Current lactose intolerance testing is expensive, time-consuming, and often uncomfortable. Many people go undiagnosed or self-diagnose incorrectly, leading to unnecessary dietary restrictions or continued discomfort.</p>
+      <p>Athletes often push through muscle fatigue without precise data, increasing the risk of injury and limiting optimal performance. Current monitoring methods are either invasive, delayed, or lack real-time insights.</p>
       
       <h2>The Solution</h2>
-      <p>LactaSense uses enzymatic biosensors to detect lactose metabolism byproducts in a simple, at-home test. Users get results in minutes rather than days, making diagnosis more accessible and affordable.</p>
+      <p>LactiSense uses enzymatic biosensors to measure lactic acid levels in real time, giving athletes and coaches actionable insights to optimize training and recovery. The system allows for safer, data-driven performance management.</p>
       
       <h2>Business Model</h2>
       <ul>
-        <li>Direct-to-consumer test kits</li>
-        <li>Partnership with primary care physicians</li>
-        <li>Subscription model for dietary tracking</li>
-        <li>Data-driven personalized nutrition recommendations</li>
+        <li>Direct-to-consumer wearable devices for athletes</li>
+        <li>Partnerships with sports teams and trainers</li>
+        <li>Subscription-based performance tracking and analytics</li>
+        <li>Data-driven personalized training recommendations</li>
       </ul>
       
       <h2>DECA Competition</h2>
-      <p>Presented LactaSense at DECA's international conference, competing against hundreds of entrepreneurship projects. The judges praised the combination of scientific innovation with practical business applications.</p>
+      <p>Presented LactiSense at DECA's international conference, competing against hundreds of entrepreneurship projects. Judges highlighted the innovative combination of biotechnology and practical business application.</p>
       
       <h2>What I Learned</h2>
-      <p>This project taught me that great innovation isn't just about the science—it's about understanding market needs, building a viable business model, and communicating complex ideas clearly. It's where my biotech passion meets real-world entrepreneurship.</p>
+      <p>This project taught me that innovation isn't just about the technology—it's about understanding user needs, building a viable business model, and clearly communicating complex ideas. It's where my passion for biotech meets real-world entrepreneurship.</p>
     `,
-    image: "https://placehold.co/800x600/3b82f6/ffffff?text=LactaSense",
-    date: "2024",
+    image: "/images/Lactasense1.png",
+    images: [
+      "/images/Lactasense1.png",
+      "/images/LactaSense2.png",
+      "/images/LactaSense3.png",
+      "/images/Lactasense4.png",
+    ],
+    date: "2023-2024",
     links: {
       paper: "#",
     },

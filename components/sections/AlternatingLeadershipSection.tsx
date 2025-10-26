@@ -35,7 +35,7 @@ const AlternatingLeadershipSection = () => {
             className="mt-4 text-lg text-primary-600 dark:text-primary-400 font-medium"
             style={{ opacity: subheaderOpacity }}
           >
-            I care deeply about being a leader and rolemodel
+            
           </motion.p>
         </div>
       </motion.div>
@@ -104,9 +104,9 @@ const AlternatingLeadershipSection = () => {
                               </div>
                               <ul className="space-y-3">
                                 {role.achievements.map((achievement, i) => (
-                                  <li key={i} className="flex items-start gap-3 text-gray-600 dark:text-gray-400">
-                                    <span className="text-primary-600 dark:text-primary-400 text-xl mt-0.5">→</span>
-                                    <span className="text-lg">{achievement}</span>
+                                  <li key={i} className="flex items-start gap-3 text-gray-600 dark:text-gray-300">
+                                    <span className="text-primary-600 dark:text-primary-400 text-xl mt-0.5 flex-shrink-0">→</span>
+                                    <span className="text-lg leading-relaxed">{achievement}</span>
                                   </li>
                                 ))}
                               </ul>

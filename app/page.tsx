@@ -46,11 +46,10 @@ export default function Home() {
                 </h1>
 
                 <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 max-w-2xl leading-relaxed font-light mb-8">
-                  Hey! I&apos;m a high school student who loves building things—whether 
-                  it&apos;s biotech research projects, community initiatives, or businesses. 
-                  This is my space to share what I&apos;ve been working on and learning. 
-                  No fancy portfolio vibes, just a casual look at the stuff I care about 
-                  and the journey so far.
+                  What&apos;s up, everyone! I&apos;m a senior at Ladue High School who loves 
+                  building and creating. This is my space to share some of the projects I&apos;ve 
+                  been working on and the things I&apos;ve been learning along the way. No fancy 
+                  portfolio—just a window into what I care about and the journey so far.
                 </p>
 
                 {/* Social Links */}

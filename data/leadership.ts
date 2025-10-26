@@ -11,17 +11,17 @@ export interface Leadership {
 export const leadership: Leadership[] = [
   {
     id: "unicef",
-    title: "UNICEF Club President",
-    organization: "School Chapter Founder",
+    title: "President",
+    organization: "UNICEF Ladue",
     period: "2022 - Present",
     description:
-      "Founded and lead our school's UNICEF chapter from the ground up. What started as an idea became a community of students committed to making a global impact. We've organized fundraisers, awareness campaigns, and volunteer initiatives that have raised thousands for children's causes worldwide.",
-    impact: "$5,000+ raised • 20+ active members",
+      "Serving as president of our school's UNICEF chapter, I lead a 12-person officer board and a team of volunteers dedicated to making a global impact. We've organized over 20 fundraisers—including three school dances—awareness campaigns, and volunteer initiatives that support children worldwide.",
+    impact: "$50,000+ raised • 486 signed up members",
     achievements: [
-      "Founded school's first UNICEF chapter",
-      "Organized 6+ major fundraising events",
-      "Built team of 20+ dedicated volunteers",
-      "Raised over $5,000 for global children's initiatives",
+      "Led a 12-person officer board and 20+ active volunteers",
+      "Organized over 20 fundraising events, including 3 school dances",
+      "Raised over $50,000 for global children's initiatives",
+      "Expanded chapter engagement and visibility across campus",
     ],
   },
   {
@@ -36,7 +36,7 @@ export const leadership: Leadership[] = [
       "3 years of varsity experience",
       "Team captain and starting midfielder",
       "Lead practices and coordinate team strategy",
-      "Balance rigorous athletics with academic excellence",
+      "Balance rigorous athletics with intense academics",
     ],
   },
 ];
